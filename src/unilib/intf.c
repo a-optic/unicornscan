@@ -58,7 +58,7 @@ int get_interface_info(const char *iname, interface_info_t *ii) {
 			for (pa=walk->addresses; pa != NULL; pa=pa->next) {
 				pcapaddr_u.s=pa->addr;
 
-			/*	if (got_linkaddr == 0 && pcapaddr_u.fs->family == AF_PACKET) {
+				if (got_linkaddr == 0 && pcapaddr_u.fs->family == AF_PACKET) {
 					if (pcapaddr_u.sl->sll_halen != 6) {
 						ERR("not ethernet?!");
 						return -1;
@@ -66,7 +66,7 @@ int get_interface_info(const char *iname, interface_info_t *ii) {
 					memcpy(ii->hwaddr, pcapaddr_u.sl->sll_addr, THE_ONLY_SUPPORTED_HWADDR_LEN);
 					got_linkaddr=1;
 				}
-				else */if (got_ipaddr == 0 && pcapaddr_u.fs->family == AF_INET) {
+				else if (got_ipaddr == 0 && pcapaddr_u.fs->family == AF_INET) {
 					myaddr_u.ss=&ii->myaddr;
 					mymask_u.ss=&ii->mymask;
 
