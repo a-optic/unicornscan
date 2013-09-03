@@ -129,7 +129,7 @@ int main(int argc, char **argv) {
 
 		hours=num_secs / (60 * 60);
 
-		sret=snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%llu Hours, ", hours);
+		sret=snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%llu hours, ", hours);
 		assert(sret > 0);
 		time_off += sret;
 
@@ -141,14 +141,14 @@ int main(int argc, char **argv) {
 
 		minutes=num_secs / 60;
 
-		sret=snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%llu Minutes, ", minutes);
+		sret=snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%llu minutes, ", minutes);
 		assert(sret > 0);
 		time_off += sret;
 
 		num_secs -= minutes * 60;
 	}
 
-	snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%u Seconds", num_secs);
+	snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%u seconds", num_secs);
 
 	VRB(0, "Scanning %.2e total hosts with %.2e total packets, should take a little longer than %s.",
 		s->num_hosts,
