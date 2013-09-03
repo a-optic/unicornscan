@@ -439,7 +439,8 @@ void do_targets(void) {
 	/* if we are not a drone */
 	if (!(GET_LISTENDRONE() || GET_SENDDRONE())) {
 		if (s->num_hosts < 1) {
-			INF("what host(s) should i scan?, ive got nothing to do");
+			INF("What should i scan? I've got nothing to do.\n");
+			usage();
 			uexit(0);
 		}
 	}
