@@ -150,7 +150,7 @@ int main(int argc, char **argv) {
 
 	snprintf(&time_est[time_off], sizeof(time_est) - (time_off + 1), "%u Seconds", num_secs);
 
-	VRB(0, "scaning %.2e total hosts with %.2e total packets, should take a little longer than %s",
+	VRB(0, "Scanning %.2e total hosts with %.2e total packets, should take a little longer than %s.",
 		s->num_hosts,
 		s->num_packets,
 		time_est
