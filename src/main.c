@@ -31,6 +31,7 @@
 #include <unilib/xipc.h>
 #include <unilib/arch.h>
 #include <unilib/standard_dns.h>
+#include <unilib/uid.h>
 
 #include <unilib/drone.h>
 #include <unilib/modules.h>
@@ -50,6 +51,9 @@ int ident=0;
 const char *ident_name_ptr=NULL;
 
 int main(int argc, char **argv) {
+
+	check_uid();
+
 	unsigned int num_secs=0, time_off=0;
 	char time_est[128];
 
