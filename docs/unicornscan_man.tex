@@ -16,8 +16,7 @@
 \begin{Name}{1}{unicornscan}{Jack}{Network Tools}{unicornscan command documentation}
 %%%%%%%%%%
 
-\Prog{unicornscan} Version \Version\ is a asynchronous network stimulus delivery/response recording
-tool.
+\Prog{unicornscan} 
 
 \end{Name}
 
@@ -64,7 +63,7 @@ tool.
 %%%%%%%%%%
 
 \Prog{unicornscan}:
-	...
+	a asynchronous network stimulus delivery/response recording tool.
 
 \section{Options}
 %%%%%%%%%%
@@ -144,23 +143,23 @@ critical scans, or with scans going over a highly unreliable network.
 The address to use to override the listeners default interfaces address. using this option often necessitates using
 the helper program \Cmd{fantaip}{1} to make sure the replies are routed back to the interface the listener has open.
 \item[   \oOpt{-S, --no-shuffle      }]
-..
+Do not shuffle ports.
 \item[\oOptArg{-t, --ip-ttl          }{Number}]
-..
+Set TTL on sent packets for example, 62, 6-16 or r64-128.
 \item[\oOptArg{-T, --ip-tos          }{Number}]
-..
+Set TOS on sent packets.
 \item[\oOptArg{-w, --savefile        }{File}]
-..
+Write pcap file of recieved packets.
 \item[\oOptArg{-W, --fingerprint     }{Type}]
-..
+Have unicornscan impersonate an OS network stack. Available OS fingerprints: 0=cisco(def) 1=openbsd 2=WindowsXP 3=p0fsendsyn 4=FreeBSD 5=nmap 6=linux 7:strangetcp
 \item[   \oOpt{-v, --verbose         }]
-..
+Verbose output. Support for up to -vvvvv, for really verbose output.
 \item[   \oOpt{-V, --version         }]
-..
+Display version.
 \item[   \oOpt{-z, --sniff           }]
-..
+Display packet parsing information.
 \item[\oOptArg{-Z, --drone-type      }{Type}]
-..
+Undocumented feature.
 \end{Description}
 
 \section{Examples}
