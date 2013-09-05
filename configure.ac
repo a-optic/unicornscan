@@ -49,9 +49,8 @@ AC_PROG_AWK
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_LN_S
-dnl we dont really even need the end user to have this, we ship pre-generated ones now
-dnl AC_PROG_LEX
-dnl AC_PROG_YACC
+AC_PROG_LEX
+AC_PROG_YACC
 
 dnl
 dnl checks for typedefs, structures, and compiler features.
