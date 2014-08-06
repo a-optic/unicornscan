@@ -135,6 +135,19 @@ int scan_setttl(const char *ttl) {
 	return 1;
 }
 #Flag to update to include file
+int scan_setsrcfile (const char *file){
+	#Open file
+		#Graceful error
+	#Loop	
+	#Test each line is a proper src address
+		#Graceful Error
+	#Scan 
+	#End Loop   
+	#close file
+		#Graceful error if close fails
+	#return true 
+}
+
 int scan_setsrcaddr(const char *addr) {
 	unsigned int msk=0;
 
